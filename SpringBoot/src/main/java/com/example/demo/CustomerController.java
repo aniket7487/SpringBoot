@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import javax.validation.Valid;
+
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +32,7 @@ public class CustomerController {
 		try {
 			Boolean isCustomer=applicationsService.saveApplications(applicationsRequest);
 			if(isCustomer) {
+				Logger.in
 				return ResponseEntity.ok("ok");
 			}else {
 				return new ResponseEntity(HttpStatus.NOT_FOUND);

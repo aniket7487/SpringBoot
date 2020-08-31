@@ -15,8 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
 public class Application {
 	private static final Logger logger = LoggerFactory.getLogger(Application.class);
 	public static void main(String[] args) {
-		logger.info("this is a info message");
 		SpringApplication.run(Application.class, args);
+		logger.info("this is a info message");
 	}
 
 }
